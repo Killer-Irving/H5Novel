@@ -1,9 +1,13 @@
-<template></template>
+<template>
+  <div>{{theme.tabIndex}}</div>
+</template>
 
 
 <script>
+import { mapState } from "vuex";
+
 export default {
-  name:'index',
+  name: "index",
   data() {
     return {};
   },
@@ -11,6 +15,11 @@ export default {
   components: {},
   mounted() {},
   created() {},
+  computed: {
+    ...mapState({
+      theme: state => state.theme
+    })
+  },
   watch: {},
   methods: {}
 };

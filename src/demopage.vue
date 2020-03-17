@@ -3,7 +3,7 @@
 
 <script>
 export default {
-  name:'index',
+  name: "index",
   data() {
     return {};
   },
@@ -11,6 +11,7 @@ export default {
   components: {},
   mounted() {},
   created() {},
+  computed: {},
   watch: {},
   methods: {}
 };
