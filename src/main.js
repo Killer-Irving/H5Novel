@@ -4,9 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import store from "./store"
 import router from './router'
+
 import { post, fetch } from '@/utils/https.js'
 Vue.prototype.$post = post;
 Vue.prototype.$get = fetch;
+
+import '@/utils/common.scss';
+import 'lib-flexible/flexible'
 
 Vue.config.productionTip = false
 

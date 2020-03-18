@@ -1,10 +1,17 @@
 <template>
-  <div>{{theme.tabIndex}}</div>
+  <div class="index-page">
+    <Shujia v-show="theme.tabIndex===0" />
+
+
+    <Bottom />
+  </div>
 </template>
 
 
 <script>
 import { mapState } from "vuex";
+import Bottom from "./components/bottom.vue";
+import Shujia from "./shujia.vue";
 
 export default {
   name: "index",
@@ -12,7 +19,10 @@ export default {
     return {};
   },
   props: {},
-  components: {},
+  components: {
+    Shujia,
+    Bottom
+  },
   mounted() {},
   created() {},
   computed: {
@@ -25,4 +35,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.index-page {
+  padding-bottom: 128px;
+}
 </style>

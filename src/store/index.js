@@ -6,13 +6,20 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
     theme: {
-      tabIndex: 0
+      tabIndex: 0,
+      shujia: {
+        isEditor: false,
+      }
     }
   },
   mutations: {
     setTabIndex(state, index) {
       //this.$store.commit('setTabIndex','参数')
       state.theme.tabIndex = index;
+    },
+    setIsEditor(state, status) {
+      //this.$store.commit('setTabIndex','参数')
+      state.theme.shujia.isEditor = !state.theme.shujia.isEditor
     },
   }
 })
